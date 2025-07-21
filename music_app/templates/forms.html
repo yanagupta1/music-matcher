@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Top 10 Songs</title>
+</head>
+<body>
+    <h1>Enter Your Top 10 Songs</h1>
+    <form action="{% url 'submit_songs' %}" method="post">
+        {% csrf_token %}
+        {% for i in range %} 
+        <div>
+            <label for="song{{ i }}">Song {{ i }}:</label>
+            <input type="text" id="song{{ i }}" name="song{{ i }}">
+        </div>
+        <div>
+            <label for="artist{{ i }}">Artist {{ i }}:</label>
+            <input type="text" id="artist{{ i }}" name="artist{{ i }}">
+        </div>
+        <div>
+            <label for="year{{ i }}">Year {{ i }}:</label>
+            <input type="text" id="year{{ i }}" name="year{{ i }}">
+        </div>
+        <br>
+        {% endfor %}
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>
