@@ -16,7 +16,7 @@ number_cols = ['valence', 'year', 'acousticness', 'danceability', 'duration_ms',
 
 
 
-sp = spotipy.Spotify(auth_manager=SpotifyClientCredentials(client_id='054ae02eced440f59261535505c8f516', client_secret='e8978ae2ca60408cbaa2a33aecc3271f'))
+sp = spotipy.Spotify(auth_manager=SpotifyClientCredentials(client_id='', client_secret='')) #fill out
 
 
 def load_csv(file_name): #method to load csv files
